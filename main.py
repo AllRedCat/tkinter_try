@@ -1,9 +1,15 @@
-import tkinter as tk
+from tkinter import *
+from tkinter import ttk
 
-def close_window():
-    window.destroy()
+root = Tk()
+frm = ttk.Frame(root, padding="100 30")
+frm.grid()
 
-window = tk.Tk()
-window.title("First try tkinter")
-window.geometry("400x300")
-window.mainloop()
+username = StringVar()
+name = ttk.Entry(frm, textvariable=username)
+name.grid(column=0, row=0)
+ttk.Button(frm, text="Quit", command=root.destroy).grid(column=0, row=2)
+
+root.mainloop()
+
+print(username.get())
