@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
-
+import socket
+    
 root = Tk()
 frm = ttk.Frame(root, padding="100 30")
 frm.grid()
